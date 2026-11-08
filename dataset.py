@@ -23,6 +23,7 @@ POSITIVE_WORDS = [
     "chill",
     "relaxed",
     "amazing",
+    "fire",
 ]
 
 NEGATIVE_WORDS = [
@@ -92,3 +93,39 @@ TRUE_LABELS = [
 #
 # Remember to keep them aligned:
 #   len(SAMPLE_POSTS) == len(TRUE_LABELS)
+
+SAMPLE_POSTS.extend([
+    "Lowkey stressed about the exam but excited to finish the semester",
+    "That concert was fire no cap",
+    "My package finally arrived 😊",
+    "Great, another flat tire. Just what I needed",
+    "I have class at ten tomorrow",
+    "Happy for my friend but sad they are moving away 🥲",
+])
+
+TRUE_LABELS.extend([
+    "mixed",
+    "positive",
+    "positive",
+    "negative",
+    "neutral",
+    "mixed",
+])
+
+
+
+SAMPLE_POSTS.extend([
+    "The building is on fire",
+    "I am not very happy",
+    "I am happy but sad",
+])
+
+TRUE_LABELS.extend([
+    "negative",
+    "negative",
+    "mixed",
+])
+
+print("Posts:", len(SAMPLE_POSTS))
+print("Labels:", len(TRUE_LABELS))
+assert len(SAMPLE_POSTS) == len(TRUE_LABELS)
